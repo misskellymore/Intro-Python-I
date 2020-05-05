@@ -11,13 +11,12 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 
 # YOUR CODE HERE
 with open('foo.txt', 'r') as f:
-    try:
-    # read_data = f.read()
-        for line in f:
-            print(line, end='')
+    
+    read_data = f.read()
 
-    finally:
-        f.close()
+f.close()
+print(read_data)
+
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,

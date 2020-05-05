@@ -30,3 +30,19 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+#Accepts user input, so input()
+#The input form is filename, a list of months, and a list of years
+
+#If the user does not choose an input, then a calender for 
+# the current month, using the datetime module
+
+#If user chooses and input, the default is month, then
+#print that month and current year
+
+#If user chooses month and year, then print out that month and year
+
+#Else, print('expected selection of month or month and year')
+
+if input("month: "):
+  input("year: ")
