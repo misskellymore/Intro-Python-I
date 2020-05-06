@@ -44,5 +44,49 @@ from datetime import datetime
 
 #Else, print('expected selection of month or month and year')
 
-if input("month: "):
-  input("year: ")
+# file name, month, year
+args = sys.argv
+print(args)
+
+
+# default to current month and year
+month = datetime.now().month
+year = datetime.now().year
+
+if len(args) == 1:
+  pass
+# 1 arg should set the month
+elif len(args) == 2:
+  month = int(args[1])
+  # print error msg if not 1-12
+# 2 args should set the month and year
+elif len(args) == 3:
+    month = int(args[1])
+    year = int(args[2])
+# error
+else:
+  print("Please enter month or month and year")
+  exit(0)
+
+
+tc = calendar.TextCalendar()
+
+# print calendar
+tc.prmonth(year, month)
+
+
+
+# def something(month, year):
+
+#   print(sys.argv)
+
+#   if input("month: "):
+#     input("year: ")
+
+
+
+# if __name__ == "__main__":
+#     # says if you're at the point where 
+#     # you're at the main module, do this
+
+#     something("March", 2020)
